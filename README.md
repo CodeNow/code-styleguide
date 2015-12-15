@@ -86,7 +86,9 @@ We also have started using `sinon`'s assert features as well (e.g. `sinon.assert
 A few notes to help guide assertions:
 
 - All tests must assert something
-- When testing with a stub in the same logical group, we must assert something about the stub
+- When testing with a stub in the same logical group, we must assert something about the stub in at least one test. Should include
+    - if it was called, or not
+    - what it was called with, if applicable
 - Stubs should (most likely) include two checks from this list:
     - `sinon.assert.called`
     - `sinon.assert.notCalled`

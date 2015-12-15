@@ -1,4 +1,4 @@
-# Runnable Code Style Guide
+# Runnable Code and Test Patterns Guide
 
 Runnable's approach to writing code and tests.
 

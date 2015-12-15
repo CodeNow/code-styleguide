@@ -71,7 +71,7 @@ One of the most powerful tools we have (and are still learning to use well) is `
 - In all tests where we do stub or spy on something,
     - if it is on an object that is regenerated every test, no action is necessary
     - if it is on a module or something persistent, always restore the function in an `after*`
-- Stub modules and functions in the correct scopes (meaning, as close to the test that uses it as possible, but hierarchal stubbing is fine)
+- Stub modules and functions in the correct scopes (meaning, as close to the test that uses it as possible, but hierarchical stubbing is fine)
 - When stubbing functions, we may stub the function to a 'truthy' behavior; doing so reduces code duplication, though the developer will need to adjust the stub(s) to test error cases
 - Collecting stubs into logical blocks and using the language to define what is being set up is encouraged (i.e. use `describe` blocks to collect and describe stubs, `it` blocks to say what happens)
 

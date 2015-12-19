@@ -89,10 +89,11 @@ A few notes to help guide assertions:
 - When testing with a stub in the same logical group, we must assert something about the stub in at least one test. Should include
     - if it was called, or not
     - what it was called with, if applicable
-- Stubs should (most likely) include two checks from this list:
+- Stubs should (most likely) include checks from this list:
     - `sinon.assert.called`
     - `sinon.assert.notCalled`
     - `sinon.assert.calledOnce`, `sinon.assert.calledTwice`, etc.
+    - `sinon.assert.callOrder`
     - `sinon.assert.calledWith`
     - `sinon.assert.calledWithExactly` (preferred over `calledWith`)
 - When testing with promises (and `chai-as-promised`), always start with something such as `return assert.isFulfilled(myPromise())`, and always remember to return your promise.

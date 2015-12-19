@@ -41,6 +41,12 @@ An important note: unit tests should _never_ touch an external service (e.g. dat
 
 **Functional** tests should align with product ideas. If a user goes through a given flow, they should finish with some outcome. We've found these tests to be pretty difficult to work with as of late, and are trying to get rid of some of these.
 
+##### Where do you draw the line?
+
+There will always be discussion on where the lines between (for example) **unit** and **integration** tests. For a unit test in a mongoose environment, mocking out the layer right at mongoose and simply returning sample objects is sufficient. The developer should have faith (and understanding) that mongoose will correctly return objects. If there's more paculiar logic that you may not be sure of or is more complex (like a map-reduce or aggrigation in mongo, or making sure populate is doing the correct thing), you would move to an **integration** test and write it there.
+
+These definitely aren't hard-and-fast lines in the sand. A good goal would be that no external services are required to get unit tests off the ground and running, but integration tests may need more setup (like a database). When we find various tests that don't fit into the classification they're housed in, we can always fix the dependency or move the test when appropriate.
+
 #### Organization
 
 In most cases, we should attempt to organize our file structure as follows:

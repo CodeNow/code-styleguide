@@ -77,6 +77,13 @@ func.js
 stub other
 stub external
 test testfn
+
+```
+**Functional Test**
+func.js
+```
+stub publish
+test testfn
 ```
 
 **Integration Test**
@@ -85,12 +92,7 @@ external.js
 call publish
 ensure rabbit state
 ```
-**Integration Test**
-external.js
-```
-call publish
-ensure rabbit state
-```
+
 #### Organization
 
 In most cases, we should attempt to organize our file structure as follows:

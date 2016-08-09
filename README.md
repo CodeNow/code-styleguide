@@ -10,7 +10,7 @@ Runnable's approach to writing code and tests.
     1. [Stubbing](#stubbing)
     1. [Asserting](#asserting)
     1. [Additional Testing Reading](#additional-testing-reading)
-1. [Configurestion Files](#configs)
+1. [Configuration Files](#configs)
 
 ## Code Formatting
 

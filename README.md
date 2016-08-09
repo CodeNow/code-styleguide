@@ -118,6 +118,7 @@ Repositories that need different configurations should have configuration files 
 #### Precedence
 
 Here is the order of precedence with number 1 being the highest priority.
+
 1. Environment variables
 2. `.env.[environment]`
 3. `.env`

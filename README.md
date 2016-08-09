@@ -10,6 +10,7 @@ Runnable's approach to writing code and tests.
     1. [Stubbing](#stubbing)
     1. [Asserting](#asserting)
     1. [Additional Testing Reading](#additional-testing-reading)
+1. [Configuration Files](#configs)
 
 ## Code Formatting
 
@@ -107,5 +108,23 @@ A few notes to help guide assertions:
 ### Additional Testing Reading
 
 An interesting read on how 'value' could be perceived in testing is one of the posts on [Google's Testing Blog](http://googletesting.blogspot.com/2015/04/just-say-no-to-more-end-to-end-tests.html). It's not super long, so I encourage anyone to read. They very much encourage unit and integration tests over end-to-end (I read it as functional) tests as they help the developers much more and have the exact same value to the customer as any end-to-end test: a bug fix. If you can write a unit test for your bug rather than an end-to-end test, wouldn't you rather do that?
+
+## Configuration
+
+#### Naming
+
+Repositories that need different configurations should have configuration files in the `config` directory. Files should be prefixed with `.env` and postfixed with the environment. Example `.env.production-gamma`. The `.env` file contains defaults shared across all environments.
+
+#### Precedence
+
+Here is the order of precedence with number 1 being the highest priority.
+
+1. Environment variables
+2. `.env.[environment]`
+3. `.env`
+ 
+#### Content
+
+Configuration files should include everything needed to configures the application per environment with the exception of secret keys / passwords and connections. Only `.env.development` and `.env.test` can have these in them.
 
 **[back to the top](#table-of-contents)**
